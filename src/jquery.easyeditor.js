@@ -61,6 +61,8 @@
             $(_this.elem).after('<div id="' + _this.randomString + '-editor" placeholder="' + placeholderText + '">' + $(_this.elem).val() + '</div>');
             $(_this.elem).hide().addClass(_this.randomString + '-bind');
 
+            $(_this.elem).attr('name',  $(_this.elem).attr('id')  );
+
             _this.elem = document.getElementById(_this.randomString + '-editor');
             $(_this.elem).attr('contentEditable', true).addClass(_this.className).wrap('<div class="'+ _this.className +'-wrapper"' + style + '></div>');
         }
